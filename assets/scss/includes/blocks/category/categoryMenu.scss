@@ -64,6 +64,11 @@
     display: none;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     background-color: #1E1E1E;
+    z-index: 5;
+    @include max-md{
+        left: -20px;
+    }
+    
     @include max-sm{
         padding: 10px 70px 10px 20px;
         width: auto;

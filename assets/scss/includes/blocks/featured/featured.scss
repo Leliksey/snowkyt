@@ -1,0 +1,22 @@
+.featured {
+    margin-top: 116px;
+    &__content {
+    }
+    &__slider {
+        position: relative;
+        padding: 0 75px;
+        margin-top: 80px;
+        @include max-lg{
+            padding: 0 50px;
+            margin-top: 65px;
+        }
+        @include max-sm{
+            padding: 0 35px;
+            margin-top: 50px;
+        }
+        
+        &-item {
+        }
+    }
+    
+}

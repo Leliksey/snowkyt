@@ -1,0 +1,79 @@
+.categoryWall {
+    margin-top: 50px;
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        @include max-lg{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include max-sm{
+            grid-template-columns: 1fr;
+        }
+        
+        
+    }
+    &__item {
+        background-color: #f2eeee;
+        width: 100%;
+        border-radius: 10px;
+        position: relative;
+        height: 756px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        @include max-lg{
+            height: 532px;
+        }
+        @include max-sm{
+            height: 460px;
+        }
+        
+        &-brand__logo {
+            max-width: 220px;
+            margin: 92px auto 0;
+            display: block;
+            @include max-lg{
+                max-width: 115px;
+            }
+            
+        }
+    }
+    &__img {
+        max-width: 75%;
+        @include max-lg{
+            max-width: 55%;
+        }
+        
+    }
+    &__link {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 10%;
+        margin: auto;
+        color: #000;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 100%;
+        padding: 20px 32px;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: 0px 20px 35px 0px rgba(0, 0, 0, 0.15);
+        width: max-content;
+        transition: .5s;
+        @include max-lg{
+            padding: 16px;
+            font-size: 14px;
+        }
+        
+        &:hover {
+            transform: scale(1.1);
+            transition: .5s;
+            color: #000;
+        }
+    }
+}

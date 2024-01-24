@@ -6,8 +6,29 @@ $(document).ready(function() {
         if ($(window).width() > 991) {
         };
     });
-    // $(".categoryMenu__item").click(function() {
-    //     $(".categoryMenu__item").removeClass("active")
-    //     $(this).addClass("active");
-    // });
+    $('.featured__slider').owlCarousel({
+        loop:true,
+        nav:true,
+        mouseDrag:true,
+        touchDrag: true,
+        pullDrag:false,
+        freeDrag:false,
+        URLhashListener:false,
+        dots:false,
+        autoplay:false,
+        responsive:{
+            0:{
+                items:1,
+                margin: 0
+            },
+            576:{
+                items:2,
+                margin:40,
+            },
+            992:{
+                items:3,
+                margin: 50,
+            }
+        }
+    });
 });

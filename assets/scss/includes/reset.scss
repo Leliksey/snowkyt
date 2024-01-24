@@ -102,8 +102,8 @@ section {
 	display: block;
 }
 body {
-	background-color: #1E1E1E;
-	font-family: 'Poppins', sans-serif;
+	background-color: #1e1e1e;
+	font-family: "Poppins", sans-serif;
 	cursor: default;
 }
 ol,
@@ -133,7 +133,7 @@ a {
 	text-transform: initial;
 	color: unset;
 	&:focus {
-		color: #C17465;
+		color: #c17465;
 	}
 }
 button {
@@ -178,10 +178,42 @@ button {
 }
 .owl-stage {
 	display: flex;
-	// align-items: center;
 }
 .owl-nav {
-	display: none;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	& button {
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='31' viewBox='0 0 36 31' fill='none'%3E%3Cpath d='M34.5 15.5L2.92288 15.5M15.0679 30L2.21144 17.2088C1.26285 16.2651 1.26285 14.7349 2.21144 13.7912L15.0679 1' stroke='%237AC5E5' stroke-width='1.67933' stroke-linecap='round'/%3E%3C/svg%3E");
+		width: 33px;
+		height: 39px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		cursor: pointer;
+		@include max-lg{
+			width: 29px;
+			height: 30px;
+		}
+		@include max-sm{
+			width: 24px;
+			height: 21px;
+		}
+		
+	}
+	& .owl-prev {
+		left: 0;
+	}
+	& .owl-next {
+		transform: rotate(180deg);
+		right: 0;
+	}
+	& span {
+		display: none;
+	}
 }
 .owl-dots {
 	display: none;
@@ -211,13 +243,18 @@ button {
 	background: rgba(255, 255, 255, 0);
 }
 .sectionTitle {
-	font-weight: 700;
-	font-size: 36px;
-	line-height: 42px;
-	color: #555555;
-	@include max-md {
-		font-size: 24px;
-		line-height: 28px;
+	color: #fff;
+	font-size: 34px;
+	font-weight: 500;
+	line-height: 35.161px;
+	border-left: 6px solid #7AC5E5;
+	padding-left: 16px;
+	@include max-lg {
+		font-size: 30px;
+		line-height: normal;
+	}
+	@include max-sm {
+		font-size: 26px;
 	}
 }
 .btn__next {
