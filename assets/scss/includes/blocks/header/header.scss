@@ -1,0 +1,149 @@
+.header {
+    border-bottom: 1px solid #fff;
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 65px;
+        @include max-lg{
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 20px;
+        }
+        
+    }
+    &__logo {
+        display: flex;
+        align-items: center;
+    }
+    &__nav {
+        display: flex;
+        align-items: center;
+        column-gap: 32px;
+        justify-content: space-between;
+        width: 100%;
+        @include max-lg{
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 20px;
+            padding-bottom: 40px;
+            display: none;
+        }
+        
+    }
+    & .top__menu_1 {
+        @include max-lg{
+            order: 2;
+        }
+    }
+    & .top__menu_1 ul {
+        @include max-lg{
+            padding-left: 25px;
+        }
+    }
+    & .top__menu_2 {
+        @include max-lg{
+            order: 3;
+        }
+    }
+}
+.search {
+    max-width: 607px;
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+    @include max-lg{
+        order: 1;
+    }
+    
+    & input {
+        width: 100%;
+        padding: 9px 17px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: normal;
+        background-color: transparent;
+        border-radius: 10px;
+        outline: none;
+        border: 1px solid #fff;
+        @include max-lg{
+            font-size: 15px;
+        }
+        
+    }
+    & input::placeholder {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 400;
+        @include max-lg{
+            font-size: 15px;
+        }
+    }
+    &__button {
+        position: absolute;
+        right: 17px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+}
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__list {
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+        @include max-lg{
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 10px;
+            padding-left: 15px;
+        }
+        
+    }
+    &__item {
+    }
+    &__link {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: normal;
+        width: max-content;
+        display: block;
+        @include max-lg{
+            font-size: 16px;
+        }
+        
+    }
+}
+.burger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 6px;
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    display: none;
+    @include max-lg{
+        display: flex;
+    }
+    & span {
+        width: 25px;
+        height: 2px;
+        background-color: #fff; 
+    }
+    &::before, &::after {
+        content: "";
+        width: 25px;
+        height: 2px;
+        background-color: #fff;
+    }
+}
+.header__nav[style*="display: block"] {
+    display: flex !important;
+  }

@@ -102,7 +102,8 @@ section {
 	display: block;
 }
 body {
-	font-family: "Raleway", sans-serif;
+	background-color: #1E1E1E;
+	font-family: 'Poppins', sans-serif;
 }
 ol,
 ul {
@@ -163,12 +164,12 @@ button {
 .container {
 	max-width: 1440px;
 	margin: auto;
-	padding: 0 133px 0 135px;
+	padding: 0 70px;
 	@include max-xl {
 		padding: 0 35px;
 	}
 	@include max-md {
-		padding: 0 15px;
+		padding: 0 20px;
 	}
 }
 .owl-stage-outer {
