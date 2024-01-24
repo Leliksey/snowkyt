@@ -6,4 +6,8 @@ $(document).ready(function() {
         if ($(window).width() > 991) {
         };
     });
+    // $(".categoryMenu__item").click(function() {
+    //     $(".categoryMenu__item").removeClass("active")
+    //     $(this).addClass("active");
+    // });
 });
