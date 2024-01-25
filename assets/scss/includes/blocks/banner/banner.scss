@@ -1,0 +1,75 @@
+.banner {
+    &__content {
+        border-radius: 12.652px;
+        border: 1.127px solid #323232;
+        background: #7ac5e5;
+        padding: 58px 255px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 116px 0;
+        @include max-xlmidle {
+            padding: 40px 150px;
+        }
+        @include max-lg {
+            padding: 40px 50px;
+            margin: 90px 0;
+        }
+        @include max-md {
+            padding: 30px 20px;
+        }
+    }
+    &__title {
+        color: #000;
+        text-align: center;
+        font-size: 50px;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: -1px;
+        @include max-md {
+            font-size: 40px;
+        }
+        @include max-sm {
+            line-height: 45px;
+            font-size: 40px;
+        }
+    }
+    &__subtitle {
+        color: #000;
+        text-align: center;
+        font-size: 23.195px;
+        font-weight: 400;
+        line-height: normal;
+        @include max-md {
+            font-size: 20px;
+        }
+        @include max-sm {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        & span {
+            color: #fff;
+            font-weight: 700;
+        }
+    }
+    &__images {
+        margin-top: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 12px;
+        @include max-lg {
+            margin-top: 30px;
+        }
+        @include max-md {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &-item {
+            &__link {
+            }
+        }
+    }
+}

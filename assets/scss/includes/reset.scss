@@ -194,15 +194,14 @@ button {
 		bottom: 0;
 		margin: auto;
 		cursor: pointer;
-		@include max-lg{
+		@include max-lg {
 			width: 29px;
 			height: 30px;
 		}
-		@include max-sm{
+		@include max-sm {
 			width: 24px;
 			height: 21px;
 		}
-		
 	}
 	& .owl-prev {
 		left: 0;
@@ -247,7 +246,7 @@ button {
 	font-size: 34px;
 	font-weight: 500;
 	line-height: 35.161px;
-	border-left: 6px solid #7AC5E5;
+	border-left: 6px solid #7ac5e5;
 	padding-left: 16px;
 	@include max-lg {
 		font-size: 30px;
@@ -271,4 +270,25 @@ select {
 }
 select::-ms-expand {
 	display: none;
+}
+.customButton {
+	color: #000;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 100%;
+	border-radius: 10px;
+	background: #7ac5e5;
+	box-shadow: 0px 20px 35px 0px rgba(0, 0, 0, 0.15);
+	padding: 20px 60px;
+	width: max-content;
+	transition: .2s;
+	@include max-lg{
+		font-size: 14px;
+		padding: 15px 40px;
+	}
+	&:hover {
+		color: #000;
+		transform: scale(1.05);
+		transition: .2s;
+	}
 }

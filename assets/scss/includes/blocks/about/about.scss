@@ -1,0 +1,65 @@
+.about {
+    &__content {
+        display: flex;
+        align-items: center;
+        column-gap: 80px;
+        margin: 116px 0;
+        @include max-lg {
+            margin: 90px 0;
+            column-gap: 50px;
+        }
+        @include max-md{
+            flex-direction: column;
+            row-gap: 30px;
+        }
+        
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        @include max-md{
+            row-gap: 20px;
+        }
+        
+    }
+    &__custom-fields {
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        @include max-lg{
+            row-gap: 15px;
+        }
+        
+        & p {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 30px; 
+            @include max-lg{
+                font-size: 14px;
+                line-height: normal;
+            }
+            
+        }
+    }
+    &__text {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px; 
+        @include max-lg{
+            font-size: 14px;
+            line-height: normal;
+        }
+        
+    }
+    &__img {
+    }
+    & .customButton {
+        @include max-md{
+            margin-right: 0;
+            margin-left: auto;
+        }
+    }
+}
