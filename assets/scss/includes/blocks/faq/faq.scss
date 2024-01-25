@@ -1,0 +1,129 @@
+.faq {
+    &__content {
+        padding: 90px 0 242px;
+        @include max-lg {
+            padding: 50px 0 142px;
+        }
+    }
+    & .blockTitle {
+    }
+    &__list {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 62px;
+        @include max-lg {
+            margin-top: 50px;
+            row-gap: 30px;
+        }
+        @include max-md{
+            row-gap: 20px;
+        }
+        @include max-sm{
+            margin-top: 40px;
+        }
+        
+        &-item {
+            border: 2px solid transparent;
+            &__top {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                column-gap: 15px;
+            }
+            &__title {
+                display: flex;
+                align-items: flex-start;
+                color: #fff;
+                font-size: 24px;
+                font-weight: 500;
+                line-height: normal;
+                padding-left: 15px;
+                padding: 15px 0 15px 15px;
+                @include max-lg {
+                    font-size: 20px;
+                }
+                @include max-sm{
+                    font-size: 18px;
+                    padding: 10px 0 10px 15px;
+                }
+                
+                
+            }
+            &__count {
+                display: block;
+                margin-right: 44px;
+                @include max-lg {
+                    margin-right: 30px;
+                }
+                @include max-sm{
+                    margin-right: 20px;
+                }
+            }
+            &__btn {
+                padding: 29px 32px;
+                border-radius: 0px 8px 0px 0px;
+                background: #7ac5e5;
+                backdrop-filter: blur(7.5px);
+                position: relative;
+                @include max-lg {
+                    padding: 22px 25px;
+                }
+
+                &::after {
+                    content: "";
+                    background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.8999 9.89997H12.1V1.09993C12.1 0.492864 11.6072 0 10.9999 0C10.3928 0 9.89997 0.492864 9.89997 1.09993V9.89997H1.09993C0.492864 9.89997 0 10.3928 0 10.9999C0 11.6072 0.492864 12.1 1.09993 12.1H9.89997V20.8999C9.89997 21.5071 10.3928 22 10.9999 22C11.6072 22 12.1 21.5071 12.1 20.8999V12.1H20.8999C21.5071 12.1 22 11.6072 22 10.9999C22 10.3928 21.5071 9.89997 20.8999 9.89997Z' fill='white'/%3E%3C/svg%3E%0A");
+                    width: 22px;
+                    height: 22px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                    @include max-lg {
+                        width: 18px;
+                        height: 18px;
+                    }
+                }
+            }
+            & p {
+                color: #fff;
+                font-size: 20px;
+                font-weight: 300;
+                line-height: 36px;
+                margin: 0 85px;
+                height: 0;
+                opacity: 0;
+                transition: 0.1s;
+                @include max-lg{
+                    margin: 0 65px;
+                    font-size: 16px;
+                    line-height: 26px;
+                }
+                @include max-sm{
+                    margin: 0 55px;
+                }
+                
+            }
+        }
+        &-item.open {
+            border-radius: 8px;
+            border: 2px solid #7ac5e5;
+            backdrop-filter: blur(7.5px);
+            padding: 0 0 50px 0;
+            & .faq__list-item__btn {
+                &::after {
+                    background-image: url("data:image/svg+xml,%3Csvg width='20' height='22' viewBox='0 0 20 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.17436 11.64H18.399C19.0477 11.64 19.5735 11.0491 19.5735 10.3199C19.5735 9.59088 19.0479 9 18.399 9H1.17436C0.525795 9.00018 0 9.59106 0 10.3201C0 11.0491 0.525795 11.64 1.17436 11.64Z' fill='white'/%3E%3C/svg%3E%0A");
+                }
+            }
+            & p {
+                height: auto;
+                opacity: 1;
+                transition: 0.1s;
+            }
+        }
+    }
+}

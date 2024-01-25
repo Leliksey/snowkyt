@@ -375,3 +375,23 @@ select::-ms-expand {
 		}
 	}
 }
+.blockTitle {
+	color: #fff;
+	text-align: center;
+	font-size: 40px;
+	font-weight: 600;
+	line-height: 140%;
+	text-transform: uppercase;
+	@include max-lg{
+		font-size: 30px;
+		line-height: 40px;
+	}
+	@include max-sm{
+		font-size: 25px;
+		line-height: 35px;
+	}
+	
+	& span {
+		color: #7ac5e5;
+	}
+}

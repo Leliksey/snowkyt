@@ -31,4 +31,7 @@ $(document).ready(function() {
             }
         }
     });
+    $(".faq__list-item__btn").click(function() {
+        $(this).parents(".faq__list-item").toggleClass("open");
+    });
 });
