@@ -1,0 +1,50 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 27px;
+    background-color: transparent;
+    // max-width: 310px;
+    @include max-md{
+        row-gap: 10px;
+    }
+    
+    &__img {
+    }
+    &__info {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: normal;
+    }
+    &__desc {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: normal;
+    }
+    &__brand {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &__price {
+        color: #000;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: normal;
+        padding: 8px 22px;
+        width: max-content;
+        border-radius: 8px;
+        background: #f6f6f6;
+    }
+}

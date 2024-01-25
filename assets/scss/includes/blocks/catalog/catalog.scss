@@ -1,0 +1,48 @@
+.catalog {
+    &__content {
+        padding: 60px 0 152px;
+        @include max-lg {
+            padding: 40px 0 100px;
+        }
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 20px;
+        row-gap: 50px;
+        @include max-lg {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include max-md {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include max-sm {
+            grid-template-columns: 1fr;
+        }
+    }
+    &__more {
+        width: max-content;
+        margin: 107px auto 0;
+        &-text {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: normal;
+            border-bottom: 1px solid #fff;
+            padding: 0 18px 18px;
+            text-align: center;
+            @include max-lg{
+                font-size: 14px;
+                padding: 0 10px 10px;
+            }
+            
+        }
+    }
+    & .customButton {
+        margin-top: 18px;
+        @include max-lg{
+            margin-top: 10px;
+        }
+        
+    }
+}
