@@ -3,7 +3,7 @@
     flex-direction: column;
     row-gap: 27px;
     background-color: transparent;
-    // max-width: 310px;
+    cursor: pointer;
     @include max-md{
         row-gap: 10px;
     }
