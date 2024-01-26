@@ -31,18 +31,17 @@
             border-bottom: 1px solid #fff;
             padding: 0 18px 18px;
             text-align: center;
-            @include max-lg{
+            @include max-lg {
                 font-size: 14px;
                 padding: 0 10px 10px;
             }
-            
         }
     }
     & .customButton {
         margin-top: 18px;
-        @include max-lg{
+        @include max-lg {
             margin-top: 10px;
         }
-        
     }
+    
 }

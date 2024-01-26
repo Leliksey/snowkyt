@@ -82,6 +82,10 @@ module.exports = {
           to: './js/slick/[name].js'
       },
         {
+          from: './assets/libs/swiper/*.css',
+          to: './js/swiper/[name].css'
+      },
+        {
           from: './assets/libs/slick/*.css',
           to: './css/slick/[name].css'
       },
