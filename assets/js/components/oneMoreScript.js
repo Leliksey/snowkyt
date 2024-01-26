@@ -41,6 +41,7 @@ $(document).ready(function() {
     $(".cardModal__close").click(function() {
         $(this).parent().hide();
         $(".overlay").hide();
+        $("body").removeClass("ovh");
     });
     $(".card").click(function() {
         $(".cardModal").show();
@@ -50,8 +51,10 @@ $(document).ready(function() {
     $(".overlay").click(function() {
         $(".cardModal").hide();
         $(".overlay").hide();
+        $("body").removeClass("ovh");
     });
-
+    $(".slider__flex .slider__next").text("");
+    $(".slider__flex .slider__prev").text("");
    
 
 

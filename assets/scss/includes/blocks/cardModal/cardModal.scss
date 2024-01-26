@@ -6,7 +6,7 @@
     right: 0;
     width: 100%;
     height: 100%;
-    padding: 0 25px 50px;
+    padding: 25px 25px 50px;
     background-color: #fff;
     max-width: 74vw;
     border-radius: 30px;
@@ -133,7 +133,7 @@
         }
     }
     &__similar {
-        margin-top: 75px;
+        margin-top: 50px;
         &-title {
             color: #000;
             font-size: 23.779px;
@@ -190,6 +190,10 @@
     /* height: 100%; */
     height: 500px;
     overflow: hidden;
+    @include max-lg{
+        height: 400px;
+    }
+    
   }
   
   .slider__flex {
@@ -197,10 +201,35 @@
     align-items: center;
     height: 100%;
   }
-  
+  .slider__flex .slider__next,
+  .slider__flex .slider__prev {
+    background-color: transparent;
+    order: -1;
+  }
+  .slider__flex .slider__next,
+  .slider__flex .slider__prev {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_d_120_802)'%3E%3Ccircle cx='11.5778' cy='11.6451' r='8.98817' fill='white'/%3E%3C/g%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.9765 14.2392C14.7572 14.4064 14.4439 14.3641 14.2766 14.1448L11.785 10.8769C11.723 10.8358 11.6324 10.8358 11.5704 10.8769L9.0788 14.1448C8.9116 14.3641 8.59827 14.4064 8.37897 14.2392C8.15966 14.072 8.11743 13.7586 8.28463 13.5393L10.7848 10.2601C10.814 10.2218 10.8582 10.1689 10.9193 10.1182C11.3551 9.75715 12.0004 9.75715 12.4361 10.1182C12.4973 10.1689 12.5414 10.2218 12.5706 10.2601L15.0708 13.5393C15.238 13.7586 15.1958 14.072 14.9765 14.2392Z' fill='%233C4242'/%3E%3Cdefs%3E%3Cfilter id='filter0_d_120_802' x='0.663562' y='0.730884' width='23.1124' height='23.1124' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dx='0.642012' dy='0.642012'/%3E%3CfeGaussianBlur stdDeviation='1.28402'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.04 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_120_802'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_120_802' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A");
+    width: 35px;
+    height: 35px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+  }
+  .slider__flex .slider__prev {
+    transform: rotate(180deg);
+  }
+  .slider__flex .slider__prev:hover,
+  .slider__flex .slider__next:hover {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_d_120_805)'%3E%3Ccircle cx='11.5777' cy='10.9545' r='8.98817' transform='rotate(180 11.5777 10.9545)' fill='%233C4242'/%3E%3C/g%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.17915 9.25918C8.39846 9.09197 8.71179 9.1342 8.87899 9.35351L11.3706 12.6215C11.4326 12.6625 11.5232 12.6625 11.5852 12.6215L14.0768 9.35351C14.244 9.1342 14.5574 9.09197 14.7767 9.25918C14.996 9.42638 15.0382 9.73971 14.871 9.95901L12.3708 13.2382C12.3416 13.2765 12.2975 13.3295 12.2363 13.3802C11.8006 13.7412 11.1553 13.7412 10.7195 13.3802C10.6584 13.3295 10.6142 13.2765 10.585 13.2382L8.08482 9.95901C7.91761 9.73971 7.95985 9.42638 8.17915 9.25918Z' fill='white'/%3E%3Cdefs%3E%3Cfilter id='filter0_d_120_805' x='0.663562' y='0.0402713' width='23.1124' height='23.1124' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dx='0.642012' dy='0.642012'/%3E%3CfeGaussianBlur stdDeviation='1.28402'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.04 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_120_805'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_120_805' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A");
+    transform: rotate(180deg);
+  }
+  .slider__flex .slider__prev:hover {
+    transform: rotate(0);
+  }
   .slider__col {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
+    align-items: center;
     width: auto;
     margin-right: 10px;
     overflow: hidden;
@@ -227,9 +256,8 @@
     outline: none;
   }
   
-  .slider__thumbs {
-    /* height: calc(400px - 96px); */
-    // height: calc(400px - 0px);
+  .slider__thumbs .swiper-container {
+    max-height: 300px;
   }
   
   .slider__thumbs .slider__image {
