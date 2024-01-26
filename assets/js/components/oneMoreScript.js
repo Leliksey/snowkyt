@@ -1,6 +1,7 @@
 $(document).ready(function() {
     $(".burger").click(function() {
         $(".header__nav").slideToggle();
+        $(".searchModal__close").click()
     });
     $(window).on("resize", function() {
         if ($(window).width() > 991) {
@@ -39,7 +40,7 @@ $(document).ready(function() {
         $(this).siblings().slideToggle();
     });
     $(".cardModal__close").click(function() {
-        $(this).parent().hide();
+        $(this).parents(".cardModal").hide();
         $(".overlay").hide();
         $("body").removeClass("ovh");
     });
@@ -53,10 +54,21 @@ $(document).ready(function() {
         $(".overlay").hide();
         $("body").removeClass("ovh");
     });
+    $(".searchModal__close").click(function() {
+        $(".searchModal").removeClass("open");
+        $(".searchModal").css("top", "-500vh")
+    });
     $(".slider__flex .slider__next").text("");
     $(".slider__flex .slider__prev").text("");
    
-
+    $(".search input").on("input", function() {
+        $(".searchModal").addClass("open");
+        var headerHeight = $(".header").height();
+        var categoryMenuHeight = $(".categoryMenu").height();
+        var filterHeight = $(".filter").height();
+        var currentHeight = headerHeight + categoryMenuHeight;
+        $(".searchModal.open").css("top", currentHeight + 20)
+    });
 
     // Инициализация превью слайдера
 const sliderThumbs = new Swiper('.slider__thumbs .swiper-container', { // ищем слайдер превью по селектору
@@ -95,11 +107,13 @@ const sliderImages = new Swiper('.slider__images .swiper-container', { // ище
 	},
 	breakpoints: { // условия для разных размеров окна браузера
 		0: { // при 0px и выше
-			direction: 'horizontal', // горизонтальная прокрутка
+			direction: 'vertical', // горизонтальная прокрутка
 		},
 		768: { // при 768px и выше
 			direction: 'vertical', // вертикальная прокрутка
 		}
 	}
 });
+
+
 });

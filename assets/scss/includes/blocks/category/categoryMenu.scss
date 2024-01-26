@@ -1,5 +1,7 @@
 .categoryMenu {
     margin-top: 17px;
+    position: relative;
+    z-index: 6;
     &__content {
     }
     &__list {
